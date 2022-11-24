@@ -51,6 +51,7 @@ export default function App() {
     let end = 0;
     const start = now();
     Papa.parse(file, {
+      header: true,
       error: (error, file) => {
         end = now();
         console.error('ERROR:', err, file);
@@ -60,8 +61,12 @@ export default function App() {
       complete: (results) => {
         end = now();
         setError(null);
+        console.table(results.data);
         setOptions(
-          results.data.slice(1).map((row) => ({ value: row[0], label: row[0] }))
+          results.data.map((row) => ({
+            value: row.Postcode,
+            label: row.Postcode,
+          }))
         );
         setTime(end - start);
         setLoading(false);
