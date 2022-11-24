@@ -154,14 +154,16 @@ export default function App() {
               <div className="text-sm">
                 <p className="font-medium text-gray-700">Postal Codes</p>
                 <p className="text-gray-500 ">
-                  The CSV should be in the format (Country is optional)
+                  The CSV must have the header Postcode
                 </p>
                 <div className="prose prose-sm sm:prose lg:prose-lg xl:prose-2xl mt-2 prose-primary bg-gray-100">
                   <pre>
                     <code>
-                      Postcode;Country
+                      Postcode
                       <br />
-                      00001;Sweden
+                      00001
+                      <br />
+                      00002
                     </code>
                   </pre>
                 </div>
