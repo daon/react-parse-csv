@@ -151,7 +151,7 @@ export default function App() {
                 <p className="text-gray-500 ">
                   The CSV should be in the format (Country is optional)
                 </p>
-                <div className="prose prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto mt-2 prose-primary bg-gray-100">
+                <div className="prose prose-sm sm:prose lg:prose-lg xl:prose-2xl mt-2 prose-primary bg-gray-100">
                   <pre>
                     <code>
                       Postcode;Country
