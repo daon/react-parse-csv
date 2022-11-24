@@ -146,9 +146,22 @@ export default function App() {
               </div>
             </div>
             <div className="mt-4 space-y-4">
-              <div className="block text-sm font-medium text-gray-700">
-                Postal Codes
+              <div className="text-sm">
+                <p className="font-medium text-gray-700">Postal Codes</p>
+                <p className="text-gray-500 ">
+                  The CSV should be in the format (Country is optional)
+                </p>
+                <div className="prose prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto mt-2 prose-primary bg-gray-100">
+                  <pre>
+                    <code>
+                      Postcode;Country
+                      <br />
+                      00001;Sweden
+                    </code>
+                  </pre>
+                </div>
               </div>
+
               <div className="flex items-center justify-center w-full">
                 <label
                   htmlFor="dropzone-file"
