@@ -71,9 +71,9 @@ export default function App() {
 
   return (
     <div className="container mx-auto pt-20">
-      <div class="shadow sm:overflow-hidden sm:rounded-md">
+      <div className="shadow sm:overflow-hidden sm:rounded-md">
         <form onSubmit={handleParse}>
-          <div class="space-y-6 bg-white px-4 py-5 sm:p-6">
+          <div className="space-y-6 bg-white px-4 py-5 sm:p-6">
             <h1 className="mt-3 text-3xl font-extrabold tracking-tight text-slate-900">
               Parse CSV
             </h1>
@@ -91,7 +91,7 @@ export default function App() {
                   />
                 </div>
                 <div className="ml-3 text-sm">
-                  <label for="stream" className="font-medium text-gray-700">
+                  <label htmlFor="stream" className="font-medium text-gray-700">
                     Stream
                   </label>
                   <p className="text-gray-500">
@@ -112,7 +112,7 @@ export default function App() {
                   />
                 </div>
                 <div className="ml-3 text-sm">
-                  <label for="worker" className="font-medium text-gray-700">
+                  <label htmlFor="worker" className="font-medium text-gray-700">
                     Worker thread
                   </label>
                   <p className="text-gray-500">
@@ -133,7 +133,7 @@ export default function App() {
                 </div>
                 <div className="ml-3 text-sm">
                   <label
-                    for="renderSelect"
+                    htmlFor="renderSelect"
                     className="font-medium text-gray-700"
                   >
                     Render select input
@@ -146,13 +146,13 @@ export default function App() {
               </div>
             </div>
             <div className="mt-4 space-y-4">
-              <div class="block text-sm font-medium text-gray-700">
+              <div className="block text-sm font-medium text-gray-700">
                 Postal Codes
               </div>
-              <div class="flex items-center justify-center w-full">
+              <div className="flex items-center justify-center w-full">
                 <label
-                  for="dropzone-file"
-                  class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600"
+                  htmlFor="dropzone-file"
+                  className="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100"
                   draggable
                   onDragEnter={handleDrag}
                   onDragLeave={handleDrag}
@@ -165,27 +165,27 @@ export default function App() {
                     </p>
                   )}
                   {!file && (
-                    <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                    <div className="flex flex-col items-center justify-center pt-5 pb-6">
                       <svg
                         aria-hidden="true"
-                        class="w-10 h-10 mb-3 text-gray-400"
+                        className="w-10 h-10 mb-3 text-gray-400"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
                           d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
                         ></path>
                       </svg>
-                      <p class="mb-2 text-sm text-gray-500 dark:text-gray-400">
-                        <span class="font-semibold">Click to upload</span> or
-                        drag and drop
+                      <p className="mb-2 text-sm text-gray-500 dark:text-gray-400">
+                        <span className="font-semibold">Click to upload</span>{' '}
+                        or drag and drop
                       </p>
-                      <p class="text-xs text-gray-500 dark:text-gray-400">
+                      <p className="text-xs text-gray-500 dark:text-gray-400">
                         .csv
                       </p>
                     </div>
@@ -193,7 +193,7 @@ export default function App() {
                   <input
                     id="dropzone-file"
                     type="file"
-                    class="hidden"
+                    className="hidden"
                     onChange={(event) => setFile(event.target.files[0])}
                     accept="text/csv"
                   />
@@ -201,11 +201,11 @@ export default function App() {
               </div>
             </div>
           </div>
-          <div class="bg-gray-50 px-4 py-3 text-right sm:px-6">
+          <div className="bg-gray-50 px-4 py-3 text-right sm:px-6">
             <button
               disabled={!file}
               type="submit"
-              class="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:opacity-50"
+              className="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:opacity-50"
             >
               Parse
             </button>
@@ -214,10 +214,10 @@ export default function App() {
       </div>
 
       {loading && (
-        <div class="mt-6 text-center">
+        <div className="mt-6 text-center">
           <div role="status">
             <svg
-              class="inline mr-2 w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
+              className="inline mr-2 w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
               viewBox="0 0 100 101"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -231,7 +231,7 @@ export default function App() {
                 fill="currentFill"
               />
             </svg>
-            <span class="sr-only">Loading...</span>
+            <span className="sr-only">Loading...</span>
           </div>
         </div>
       )}
@@ -243,8 +243,8 @@ export default function App() {
             Stats
           </h2>
           <div className="mt-2">
-            <div class="shadow sm:overflow-hidden sm:rounded-md">
-              <div class="bg-white px-4 py-5 sm:p- sm:py-6">
+            <div className="shadow sm:overflow-hidden sm:rounded-md">
+              <div className="bg-white px-4 py-5 sm:p- sm:py-6">
                 <p className="text-sm font-semibold text-gray-400 dark:text-gray-200">
                   Time
                 </p>
@@ -259,7 +259,7 @@ export default function App() {
 
       {renderSelect && options && (
         <Select
-          className="mt-4"
+          className="mt-4 mb-8"
           defaultValue={options}
           isMulti
           options={options}
